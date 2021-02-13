@@ -1,0 +1,106 @@
+*{
+    margin: 0px auto;
+    padding: 0px auto;
+    background-color: #222930;
+    color: #f1efef;
+    font-size: 21px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+#kontener{
+    background-color:  #222930;
+    height: auto;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+;
+
+}
+
+#parametry{
+    height: 400px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+
+}
+
+.wiersz{
+    display: inline-block;
+}
+
+.zmienne{
+    margin-left: auto;
+    margin-top: 50px;
+    margin-right: auto;
+    display: inline-block;
+    font-size: 21px;
+    height: 25px;
+    width: 240px;
+    text-align: center;
+}
+
+.pola{
+    background-color:#f1efef;
+    color: #222930;
+    height: 50px;
+    width: 214px;
+    margin-right: 10px;
+    padding-left: 8px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.policz{
+    background-color:#f1efef;
+    color: #222930;
+    margin-top:25px;
+    height: 50px;
+    width: 1017px;
+    border: none;
+    border-radius: 5px;
+}
+
+.komunikaty{
+    color: #222930;
+    height: auto;
+    width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    font-size: 21px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#opis_rat{
+    margin-bottom: 250px;
+}
+
+.tabela{
+    border: solid 1.5px;
+    font-style: italic;
+    text-align: left;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: justify;
+    padding-left: 25px;
+}
+
+td {
+    padding: 15px;
+    text-align: left;
+}
+
+td:hover {
+    background-color: #121920;
+    transition-duration: 0.8s;
+}
+
+/** WYŁĄCZENIE STRZAŁEK W POLU NUMBER**/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

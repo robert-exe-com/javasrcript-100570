@@ -1,0 +1,77 @@
+<!doctype html>
+
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+
+  <title>Kalkulator kredytowy</title>
+  <link rel="stylesheet" href="style/main.css">  
+  <link rel="stylesheet" href="style/suwak.css">
+
+  <script src="script.js"> 
+    function updateRangeInput(elem) {
+    $(elem).next().val($(elem).val());
+}
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <div id="kontener">
+
+
+        <div id="parametry">
+            <div class="wiersz">
+                <div class="zmienne">Kwota kredytu</br>(300 - 180 000 PLN)</div>
+                <form name="#" >
+                    <span class="input-symbol-pln">
+                    <input type="number" class="pola" value="10000" placeholder="Wpisz kwotę" min="500" max="180000" name="kwota_pole_name" id="kwota_pole_id"></br>
+                    </span>
+                    <input type="range" list="kwota_lista" min="300" max="180000" value="10000" name="kwota_suwak_name" id="kwota_suwak_id" onchange="getvalor(this.value);" oninput="kwota_pole_id.value = kwota_suwak_id.value"> 
+                </form>
+            </div>
+
+            <div class="wiersz">
+                <div class="zmienne">Okres kredytowania</br>(3 - 120 MSC)</div>
+                <form name="#">
+                    <span class="input-symbol-msc">
+                    <input type="number" class="pola" value="60" placeholder="Wpisz okres" min="3" max="120" name="okres_pole_name" id="okres_pole_id"></br>
+                    </span>
+                    <input type="range" min="3" max="120" value="60" name="okres_suwak_name" id="okres_suwak_id" onchange="getvalor(this.value);" oninput="okres_pole_id.value = okres_suwak_id.value"> 
+                    
+                </form>
+            </div>
+
+            <div class="wiersz">
+                <div class="zmienne" id="z3">Oprocentowanie kredytu</div>
+                <form name="#">
+                    <span class="input-symbol-percent">
+                    <input type="number" class="pola" step="0.1" value="7.2" placeholder="Wpisz oprocentowanie" min="500" max="180000" name="oprocentowanie_pole_name" id="oprocentowanie_pole_id"></br>
+                </span>
+                    <input type="range" min="1" max="7.2" step="0.1" value="7.2" name="oprocentowanie_suwak_name" id="oprocentowanie_suwak_id" onchange="getvalor(this.value);" oninput="oprocentowanie_pole_id.value = oprocentowanie_suwak_id.value"> 
+                    
+                </form>
+            </div>
+
+            <div class="wiersz">
+                <div class="zmienne" id="z3">Prowizja</div>
+                <form name="#">
+                    <span class="input-symbol-percent">
+                    <input type="number" class="pola" step="0.1" value="0" min="0" max="25" placeholder="Wpisz prowizję" name="prowizja_pole_name" id="prowizja_pole_id"></br>
+                    </span>
+                    <input type="range" min="0" max="25" step="0.1" value="0" name="prowizja_suwak_name" id="prowizja_suwak_id" onchange="getvalor(this.value);" oninput="prowizja_pole_id.value = prowizja_suwak_id.value"> 
+                    
+                </form>
+            </div>
+            <button class="policz" onclick="kosztykredytu()"> Oblicz ratę i koszty </button>
+        </div>
+        
+        <div id="szczegoly_kredytu" class="komunikaty"></div>
+
+        <div id="opis_rat" class="komunikaty"></div>
+
+         
+    </div>
+</body>
+</html>
